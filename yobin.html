@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yobino</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            /* background: linear-gradient(42deg, rgba(18,0,49,1) 0%, rgba(26,2,81,1) 70%, rgba(132,51,245,1) 100%); */
+            /* color: white; */
+
+            /* background: linear-gradient(67deg, rgba(9,0,55,1) 0%, rgba(22,3,65,1) 57%, rgba(91,46,255,1) 100%); */
+            background-image: url(/images/paper.png);
+            /* background:  linear-gradient(67deg, rgba(9, 0, 55, 1) 0%, rgb(125 68 255) 57%, rgba(91, 46, 255, 1) 100%);;
+color: rgb(0, 0, 0); */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            background-color: #1c1c1e;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: black;
+            margin-right: 15px;
+        }
+
+        .content {
+            padding: 50px 0;
+        }
+
+        .video-embed {
+            margin-bottom: 30px;
+        }
+
+        .btn-orange {
+            background-color: orange;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+        }
+
+        .btn-orange:hover {
+            background-color: darkorange;
+        }
+
+        .benefits {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .img-icons {
+            width: 258px;
+        }
+
+        .ext {
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .ext:hover {
+            transform: scale(1.1);
+            /* Scale up the button to 110% */
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .center {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .monitor {
+            /* width: 100%; 
+      height: 85vh;  */
+            width: 90vw;
+            /* Increased responsive width */
+            max-width: 1000px;
+            /* Updated maximum width */
+            height: 50vw;
+            /* Increased responsive height */
+            max-height: 600px;
+            /* Updated maximum height */
+            background: #000;
+            border-bottom: 60px solid #d8d8d8;
+            border-radius: 20px;
+            position: relative;
+        }
+
+
+
+        .monitor:before {
+            content: "";
+            width: 140px;
+            /* Increased width */
+            height: 120px;
+            /* Increased height */
+            background: #bdbdbd;
+            position: absolute;
+            left: 50%;
+            bottom: -131px;
+            transform: perspective(200px) translateX(-50%) rotateX(25deg) skewX(7deg);
+            z-index: -1;
+            transform-origin: bottom;
+        }
+
+        .monitor:after {
+            content: "";
+            width: 280px;
+            /* Increased width */
+            height: 30px;
+            /* Increased height */
+            background: #bdbdbd;
+            position: absolute;
+            left: 50%;
+            bottom: -160px;
+            transform: translateX(-50%);
+            z-index: -1;
+            transform-origin: bottom;
+        }
+
+        .monitor i {
+            position: absolute;
+            left: 50%;
+            bottom: 8px;
+            text-decoration: none;
+            transform: translateX(-50%) scale(1.6);
+            /* Adjusted scale to match new monitor size */
+            color: #858585;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            /* Increased border-radius */
+        }
+
+
+
+        .biglogo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .biglogo {
+            animation: moveUpDown 4s infinite;
+        }
+
+        .feature {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes moveUpDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-50px);
+                /* Adjust the value as needed */
+            }
+        }
+    </style>
+    <!-- FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #1c1c1e00 !important; ">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Logo" class="logo" width="110">
+        </a>
+        <button style="    border: 2px dashed #000000;
+        width: 4px;
+        height: 24px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#use">How to Use It</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#benefits">Benefits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Yobino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-us">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a style="background-color:#000000;color: rgb(255, 255, 255);"
+                        class="ext nav-link btn btn-outline-light ml-3" href="#">Get Yobino</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content container">
+        <!-- Video Embed and Text Content -->
+        <div class="row" style="margin-top: 85px;">
+            <div class="col-md-4 video-embed">
+
+                <div class="biglogo-container">
+                    <img src="images/icon.png" alt="bigLogo" class="biglogo" width="288">
+                </div>
+
+
+
+            </div>
+            <div class="col-md-8 text-content" style="text-align: center;">
+                <h2 class="bold">#1 Navigation Extension for ChatGPT</h2>
+                <h1 class="display-4 font-weight-bold">Unlimited and Free Forever!</h1>
+                <p>Long conversation in ChatGPT can be overwhelming to navigate. Yobino solves this by make navigating
+                    ChatGPT messages effortless—preview and auto-scroll to any part of your conversation without endless
+                    searching!</p>
+                <button class="btn text-white ext"
+                    style="background-color: #000000;color: white !important;border: 1px solid;"><img
+                        src="images/chrome.png" alt="chrome extension" style="width: 35px;margin-right: 7px;"> Get
+                    Yobino (Add to Google Chrome)</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Main Content -->
+    <div id="use" class="container text-center mt-5" style="margin-bottom: 150px !important">
+        <h1>How to use it</h1>
+        <div class="feature">
+            <h4 style="color: #010084;">Instant Preview on Hover</h2>
+                <p>
+                    The panel lists every message in your conversation as sequential items (e.g., Q1, A1, Q2, A2…).
+                    Hovering your mouse over any list item instantly displays a preview of that message. This allows you
+                    to quickly recall the context without scrolling through a long chat.
+                </p>
+        </div>
+
+        <div class="feature">
+            <h4 style="color: #010084;">One-Click Scroll Navigation</h2>
+                <p>
+                    Need to jump to a particular question or answer? Simply click the corresponding item in the panel,
+                    and the extension automatically scrolls the main chat window to that exact spot. This helps you
+                    locate and revisit important parts of your conversation without any hassle.
+                </p>
+        </div>
+        <div class="center">
+            <div class="monitor">
+                <img style="border: 1.88vw solid black;" class="monitor" src="images/screen.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Benefits Section -->
+    <div id="benefits" class="benefits container">
+        <h2 class="mb-5">Yobino benefits</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-12 mb-4">
+                <div class="benefit-icon">
+                    <img class="img-icons" src="assets/img/ChatGPT.png">
+                </div>
+                <h5>ChatGPT</h5>
+                <p>Easy to use with ChatGPT</p>
+            </div>
+            <div class="col-md-4 col-sm-12 mb-4">
+                <div class="benefit-icon">
+                    <img class="img-icons" src="assets/img/infinity.png">
+                </div>
+                <h5>Unlimited & Free</h5>
+                <p>No cost or upgrades required , use it unlimitedly</p>
+            </div>
+            <div class="col-md-4 col-sm-12 mb-4">
+                <div class="benefit-icon">
+                    <img class="img-icons" src="assets/img/voice.png">
+                </div>
+                <h5>No signup</h5>
+                <p>Use it directly , no login or signup required</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Main Content -->
+    <div id="about" class="container text-center mt-5">
+        <h1>About Yobino</h1>
+        <p class="lead text-left">
+            Navigating lengthy ChatGPT conversations can be a challenge. Yobino extension streamlines the process by
+            automatically generating a neatly organized side-panel that lists every question and answer. Now,
+            pinpointing a specific part of your conversation is as effortless as hovering over or clicking the relevant
+            segment.
+        </p>
+
+    </div>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="container mt-5 mb-5  p-5 rounded shadow-sm">
+        <h2 class="mb-4 text-center">Contact Us</h2>
+        <form id="contact-form" method="post" enctype="text/plain">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control shadow-sm rounded" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control shadow-sm rounded" id="message" name="message" rows="3"
+                    required></textarea>
+            </div>
+            <div style="text-align: center;">
+                <button style="background-color: #070116; border: 1px solid white;" type="submit"
+                    class="btn btn-primary shadow-sm rounded">Send</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="text-light py-4" style="background-color: black;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <a href="#" class="navbar-brand text-light"><img src="images/icon.png" width="50"> Yobino</a>
+                <p class="mb-0">Transform your experience! Join thousands of people who love Yobino.</p>
+            </div>
+
+            <div>
+                <p class="mt-2 mb-0"><a href="privacy.html">Privacy Policy</a> </p>
+                <p class="mt-2 mb-0">&copy; 2025 Yobino LLC.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form values
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Encode the subject and body for the email URL
+            const subject = 'Message from Contact Form';
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedMessage = encodeURIComponent(message);
+
+            // Construct the Gmail URL
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&to=abdolahbd@gmail.com&su=${encodedSubject}&body=${encodedMessage}`;
+
+            // Open the Gmail URL in a new tab
+            window.open(gmailUrl, '_blank');
+        });
+    </script>
+
+</body>
+
+</html>
