@@ -8,6 +8,6 @@
     "link": "https://google.com",
     "text": "surprise",
     "enabled": 0,
-    "html_top_bar_light": "<div style='text-align: center; font-size: 16px; color: blue;'>123</div>",
-    "html_top_bar_dark": "<div style='text-align: center; font-size: 16px; color: yellow;'>456</div>"
+    "html_top_bar_light": "<div style='text-align: center; font-size: 16px; color: blue;'>aaa</div>",
+    "html_top_bar_dark": "<div style='text-align: center; font-size: 16px; color: yellow;'>bbb</div>"
 }
