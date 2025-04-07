@@ -8,6 +8,6 @@
     "link": "https://yobino.com",
     "text": "Support",
     "enabled": 1,
-    "html_top_bar_light": "<div style='text-align: center; font-size: 16px; color: blue;'>123</div>",
-    "html_top_bar_dark": "<div style='text-align: center; font-size: 16px; color: yellow;'>ABC</div>"
+    "html_top_bar_light": "<div style='text-align: center; font-size: 16px; color: blue;'>OOO</div>",
+    "html_top_bar_dark": "<div style='text-align: center; font-size: 16px; color: yellow;'>MMM</div>"
 }
