@@ -8,6 +8,6 @@
     "link": "https://yobino.com",
     "text": "",
     "enabled": 1,
-    "html_top_bar_light": "<div style='text-align: center; font-size: 16px; color: blue;'><a href="https://www.w3schools.com/">Visit W3Schools.com!</a></div>",
+    "html_top_bar_light": "<div style='text-align: center; font-size: 16px; color: blue;'><a href='https://www.w3schools.com/'>Visit W3Schools.com!</a></div>",
     "html_top_bar_dark": "<div style='text-align: center; font-size: 16px; color: yellow;'>MMM</div>"
 }
